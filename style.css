@@ -24,6 +24,35 @@
   --font-display: "Courier New", "Consolas", monospace;
   --radius: 2px;
   --transition: 0.25s ease;
+  --accent-glow: rgba(61, 46, 38, 0.35);
+}
+
+/* Time-of-day temperature */
+html[data-theme="day"] {
+  --bg: #0a0908;
+  --bg-elevated: #12100e;
+  --accent-glow: rgba(61, 46, 38, 0.4);
+}
+
+html[data-theme="evening"] {
+  --bg: #0a0809;
+  --bg-elevated: #120e10;
+  --cherry: #5a1a28;
+  --purple: #241830;
+  --accent-glow: rgba(122, 31, 50, 0.25);
+}
+
+html[data-theme="night"] {
+  --bg: #07060a;
+  --bg-elevated: #0e0c12;
+  --purple: #1a1228;
+  --purple-bright: #4a3560;
+  --cherry: #3d121c;
+  --cherry-bright: #8a2840;
+  --green: #14221c;
+  --accent-glow: rgba(58, 42, 74, 0.35);
+  --line: rgba(200, 190, 220, 0.1);
+  --line-strong: rgba(200, 190, 220, 0.22);
 }
 
 *,
@@ -305,41 +334,62 @@ img {
   z-index: 1;
 }
 
-/* Geometric modules */
+/* Geometric modules — compact visual cards */
 .geo-module {
   border: 1px solid var(--line-strong);
   background: linear-gradient(145deg, rgba(42, 31, 26, 0.4), rgba(8, 8, 7, 0.8));
-  padding: 1.25rem;
+  padding: 1.1rem 0.9rem 1.4rem;
   position: relative;
-  transition: border-color var(--transition), transform var(--transition);
-  cursor: default;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100px;
 }
 
 .geo-module:hover {
   border-color: var(--cream-dim);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.geo-module .mod-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 0.45rem;
+  opacity: 0.85;
+  color: var(--cream-dim);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.geo-module:hover .mod-icon {
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 .geo-module .mod-title {
-  font-size: 1.1rem;
-  letter-spacing: 0.2em;
-  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
   color: var(--cream);
+  margin-bottom: 0;
 }
 
 .geo-module .mod-desc {
-  font-size: 0.75rem;
-  color: var(--cream-muted);
-  line-height: 1.4;
+  display: none; /* simplified — no long text on cards */
 }
 
 .geo-module .mod-num {
   position: absolute;
-  bottom: 0.4rem;
-  right: 0.6rem;
+  bottom: 0.35rem;
+  right: 0.5rem;
   font-size: 0.55rem;
   color: var(--cream-muted);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 }
 
 /* Side labels */
@@ -487,20 +537,28 @@ img {
 
 .avatar-wrap {
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
   aspect-ratio: 1;
   border: 1px solid var(--line-strong);
   background: linear-gradient(160deg, var(--purple), var(--brown));
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  box-shadow: 0 0 0 1px rgba(232, 220, 200, 0.06), 0 12px 32px rgba(0, 0, 0, 0.4);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.avatar-wrap:hover {
+  border-color: var(--cream-dim);
+  box-shadow: 0 0 24px rgba(122, 31, 50, 0.25), 0 12px 32px rgba(0, 0, 0, 0.45);
 }
 
 .avatar-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.9;
+  object-position: center 40%;
+  opacity: 0.95;
 }
 
 .avatar-fallback {
@@ -996,6 +1054,11 @@ img {
     display: flex;
   }
 
+  .site-nav a {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.75rem;
+  }
+
   .site-header {
     flex-direction: column;
     align-items: flex-start;
@@ -1005,6 +1068,7 @@ img {
     order: -1;
     width: 100%;
     justify-content: flex-end;
+    font-size: 0.75rem;
   }
 
   .side-label {
@@ -1013,6 +1077,67 @@ img {
 
   .modules-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .modules-grid .geo-module {
+    min-height: 96px;
+    padding: 1rem 0.6rem 1.2rem;
+  }
+
+  .geo-module .mod-icon {
+    font-size: 1.45rem;
+  }
+
+  .geo-module .mod-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+  }
+
+  .hero-phrase {
+    font-size: 0.95rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .page-head h1 {
+    font-size: 1.5rem;
+  }
+
+  .terminal {
+    font-size: 0.75rem;
+  }
+
+  .terminal-body {
+    min-height: 3.5rem;
+    max-height: 7rem;
+  }
+
+  /* On very small screens keep only 2 terminals visible feel */
+  .terminals-row .terminal:nth-child(3) {
+    display: none;
+  }
+
+  .contact-card .ch-name {
+    font-size: 1.15rem;
+  }
+
+  .contact-card .ch-note {
+    font-size: 0.8rem;
+  }
+
+  .service-panel .svc-title {
+    font-size: 1.25rem;
+  }
+
+  .service-panel li {
+    font-size: 0.9rem;
   }
 }
 
@@ -1031,3 +1156,146 @@ img {
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 1.5rem; }
 .mb-1 { margin-bottom: 1rem; }
+
+/* ========== COZY STICKERS ========== */
+.stickers {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.sticker {
+  position: absolute;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--cream);
+  background: linear-gradient(145deg, #e8dcc8, #d4c4a8);
+  color: #2a1f1a;
+  padding: 0.35rem 0.55rem;
+  border-radius: 2px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(42, 31, 26, 0.12);
+  transform-origin: center;
+  white-space: nowrap;
+  user-select: none;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.sticker-1 {
+  top: -0.5rem;
+  left: 4%;
+  transform: rotate(-8deg);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.sticker-2 {
+  top: 0.2rem;
+  right: 12%;
+  transform: rotate(12deg);
+  background: linear-gradient(145deg, #c4a882, #b89870);
+  font-size: 0.85rem;
+}
+
+.sticker-3 {
+  top: -1.2rem;
+  left: 42%;
+  transform: rotate(3deg);
+  white-space: normal;
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 1.25;
+  padding: 0.4rem 0.5rem;
+  background: linear-gradient(145deg, #f0e6d4, #e0d0b8);
+}
+
+.sticker-4 {
+  top: 0.8rem;
+  right: 28%;
+  transform: rotate(-5deg);
+  background: linear-gradient(145deg, #d8c8e0, #c8b8d0);
+  font-size: 0.8rem;
+}
+
+.sticker-5 {
+  top: -0.8rem;
+  right: 4%;
+  transform: rotate(7deg);
+  background: linear-gradient(145deg, #c8d8c8, #b8c8b8);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .sticker-3 { display: none; }
+  .sticker-5 { display: none; }
+  .sticker-1 { left: 2%; font-size: 0.8rem; }
+  .sticker-2 { right: 8%; }
+  .sticker-4 { right: 20%; top: 0.4rem; }
+}
+
+/* ========== SECRET NODE ========== */
+.secret-node {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  background: rgba(8, 8, 7, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.secret-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-strong);
+  padding: 1.75rem 1.5rem;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.secret-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--cream-muted);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.secret-card p {
+  font-size: 0.9rem;
+  color: var(--cream-dim);
+  margin-bottom: 0.5rem;
+}
+
+.secret-emoji {
+  font-size: 1.4rem;
+  margin: 0.75rem 0 1rem !important;
+  color: var(--cream);
+}
+
+.secret-close {
+  font-family: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--cream);
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.secret-close:hover {
+  border-color: var(--cream-dim);
+}
+
+/* Contacts: 3 cards look balanced */
+@media (min-width: 600px) {
+  .contacts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
