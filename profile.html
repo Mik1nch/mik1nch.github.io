@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Профиль Mikinch.">
+  <title>Профиль — Mikinch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile">
+  <div class="cursor-glow" aria-hidden="true"></div><div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand magnetic" href="index.html"><span class="brand-mark">M</span><span class="brand-text">MIKINCH<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav"><a href="index.html" data-nav="home">Главная</a><a href="services.html" data-nav="services">Услуги</a><a href="portfolio.html" data-nav="portfolio">Работы</a><a href="about.html" data-nav="about">Обо мне</a><a href="contact.html" data-nav="contact">Контакты</a></nav>
+    <a class="header-cta magnetic" href="contact.html"><span>Связаться</span><span class="arrow">↗</span></a>
+  </header>
+
+  <main>
+    <section class="section profile-page">
+      <div class="profile-page-head reveal"><span class="section-index">PROFILE / MIKINCH</span><div class="profile-page-title"><h1 data-profile-name>Mikinch</h1><span class="live-chip"><i></i> online</span></div><p data-profile-bio>Digital creator. Code, art, AI and presentations.</p></div>
+      <div class="profile-page-grid">
+        <div class="profile-large-card reveal tilt-card">
+          <div class="profile-card-top"><span>PERSONAL PROFILE</span><span>VER. 1.0</span></div>
+          <div class="profile-photo-placeholder"><div class="profile-photo-glow"></div><div class="profile-photo-letter">M</div></div>
+          <div class="profile-card-bottom"><span data-profile-location>Uzbekistan</span><span>ONLINE</span></div>
+        </div>
+        <div class="profile-text-card reveal">
+          <span class="section-index">ABOUT</span><h2 data-profile-headline>Создаю цифровые вещи на стыке кода, визуала и AI.</h2><p data-profile-description>Сюда позже можно поставить полноценное описание, опыт, интересы и формат работы.</p>
+          <div class="facts-grid profile-facts"><div><span>Alias</span><strong data-profile-name>Mikinch</strong></div><div><span>Location</span><strong data-profile-location>Uzbekistan</strong></div><div><span>Role</span><strong>Digital creator</strong></div><div><span>Focus</span><strong>Code / Art / AI</strong></div></div>
+        </div>
+      </div>
+      <div class="profile-edit-note reveal"><span>EDIT LATER</span><p>Основная информация вынесена в <code>data/profile.js</code>. Когда понадобится поменять имя, описание, страну или контакты, достаточно изменить один файл.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><span>© <span id="year"></span> Mikinch</span><span class="footer-dot">•</span><span>Digital creator</span></div><div><span>Built with intention</span><span>↗</span></div></footer>
+  <script src="data/profile.js"></script><script src="script.js"></script>
+</body>
+</html>
