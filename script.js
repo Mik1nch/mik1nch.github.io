@@ -2,6 +2,134 @@
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+
+  // ---------------------------------------------------------
+  // Boot screen / fast-jolt progress
+  // ---------------------------------------------------------
+  const boot = document.querySelector(".boot-screen");
+  const bootBar = document.querySelector(".boot-progress span");
+  const bootPercent = document.querySelector(".boot-percent");
+  const bootLine = document.querySelector(".boot-live-line");
+  const bootState = document.querySelector(".boot-state");
+
+  const bootLines = [
+    "initializing creative node...",
+    "loading interface fragments...",
+    "mounting /visual /code /ai...",
+    "checking local modules...",
+    "warming up terminal...",
+    "opening portfolio shell...",
+    "routing signal...",
+    "calibrating chaos...",
+    "assembling interface...",
+    "almost there..."
+  ];
+
+  function runBoot(isNavigation = false) {
+    if (!boot || !bootBar || !bootPercent) return Promise.resolve();
+    document.body.classList.add(isNavigation ? "is-leaving" : "is-booting");
+    boot.classList.remove("is-done");
+    boot.setAttribute("aria-hidden", "false");
+    if (bootState) bootState.textContent = isNavigation ? "ROUTE" : "INIT";
+
+    let progress = 0;
+    let lastLine = -1;
+    const started = performance.now();
+    const totalTime = isNavigation ? 620 : 760;
+
+    return new Promise(resolve => {
+      function tick(now) {
+        const elapsed = now - started;
+        // Uneven, very fast jumps rather than a smooth fake loader.
+        const target = Math.min(100, (elapsed / totalTime) * 100);
+        const jump = target > progress
+          ? Math.min(target, progress + (Math.random() * 17 + 7))
+          : progress;
+        progress = Math.min(100, jump);
+
+        bootBar.style.width = `${progress}%`;
+        bootPercent.textContent = `${String(Math.round(progress)).padStart(2,"0")}%`;
+
+        if (bootLine && (lastLine === -1 || Math.random() < .13)) {
+          const next = Math.floor(Math.random() * bootLines.length);
+          if (next !== lastLine) {
+            bootLine.textContent = bootLines[next];
+            lastLine = next;
+          }
+        }
+
+        if (progress >= 100 || elapsed >= totalTime) {
+          bootBar.style.width = "100%";
+          bootPercent.textContent = "100%";
+          if (bootLine) bootLine.textContent = "interface ready.";
+          setTimeout(() => {
+            boot.classList.add("is-done");
+            document.body.classList.remove("is-booting");
+            resolve();
+          }, isNavigation ? 70 : 150);
+          return;
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+
+  if (boot) runBoot(false);
+
+  // ---------------------------------------------------------
+  // Same-origin page transition
+  // ---------------------------------------------------------
+  const sameOriginLink = a => {
+    if (!a.href) return false;
+    const url = new URL(a.href, location.href);
+    return url.origin === location.origin &&
+      url.pathname !== location.pathname &&
+      !a.target &&
+      !a.download &&
+      !a.hasAttribute("data-no-transition");
+  };
+
+  $$("a").forEach(link => {
+    link.addEventListener("click", async e => {
+      if (!sameOriginLink(link)) return;
+      if (document.body.classList.contains("is-leaving")) {
+        e.preventDefault();
+        return;
+      }
+      e.preventDefault();
+      const url = link.href;
+      document.body.classList.add("is-leaving");
+      await runBoot(true);
+      window.location.href = url;
+    });
+  });
+
+  // ---------------------------------------------------------
+  // Ambient glitch bursts: cherry / dark green / purple.
+  // Rare, brief, and intentionally uneven.
+  // ---------------------------------------------------------
+  const flash = document.querySelector(".glitch-flash");
+  const glitchBody = document.body;
+  if (flash && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const palettes = ["cherry", "green", "purple"];
+
+    const scheduleGlitch = () => {
+      const delay = 4500 + Math.random() * 8200;
+      setTimeout(() => {
+        const kind = palettes[Math.floor(Math.random() * palettes.length)];
+        flash.dataset.kind = kind;
+        flash.classList.remove("active");
+        void flash.offsetWidth;
+        flash.classList.add("active");
+        glitchBody.classList.add("glitch-active");
+        setTimeout(() => glitchBody.classList.remove("glitch-active"), 220);
+        scheduleGlitch();
+      }, delay);
+    };
+    scheduleGlitch();
+  }
+
   // Year
   $$("#year").forEach(el => el.textContent = new Date().getFullYear());
 

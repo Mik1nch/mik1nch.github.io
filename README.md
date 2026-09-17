@@ -42,3 +42,11 @@ contacts: {
 ## Контакты
 
 Основные публичные ссылки хранятся в `data/profile.js`. Сейчас подключены Telegram, TikTok и Pinterest.
+
+
+## v5 visual system
+
+- Fast boot screen with irregular progress jumps.
+- Same boot sequence on internal page navigation.
+- Rare glitch bursts in cherry, dark green and purple.
+- Motion effects respect `prefers-reduced-motion`.
