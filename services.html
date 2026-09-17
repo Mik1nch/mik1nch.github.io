@@ -1,84 +1,110 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Услуги Mikinch: разработка, дизайн, anime-art, презентации, AI и персональная поддержка.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080807">
+  <meta name="description" content="Услуги — Mikinch">
   <title>Услуги — Mikinch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body data-page="services">
 
-  <div class="boot-screen" aria-hidden="true">
-    <div class="boot-shell">
-      <div class="boot-head">
-        <span>MIKINCH://BOOT</span>
-        <span class="boot-state">INIT</span>
-      </div>
-      <div class="boot-code">
-        <div><span class="boot-prompt">C:\MIKINCH&gt;</span> <span class="boot-live-line">initializing creative node...</span><span class="boot-caret">█</span></div>
-        <div class="boot-subline">loading interface modules / local visual layer / no external connection</div>
-      </div>
-      <div class="boot-progress-wrap">
-        <div class="boot-progress"><span></span></div>
-        <div class="boot-percent">00%</div>
-      </div>
-      <div class="boot-foot">
-        <span>BOOT SEQUENCE</span>
-        <span>MK / LOCAL</span>
-      </div>
+<div class="boot-overlay" aria-hidden="true">
+  <div class="boot-frame">
+    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
+    <div class="boot-title">loading <em>personality.exe</em></div>
+    <div class="boot-lines">
+      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
+      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
+      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
     </div>
+    <div class="boot-progress">
+      <span data-boot-bar></span>
+    </div>
+    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
   </div>
-  <div class="glitch-flash" aria-hidden="true"></div>
-
-  <div class="cursor-glow" aria-hidden="true"></div><div class="page-noise" aria-hidden="true"></div><div class="corner-code" aria-hidden="true">MK / DIGITAL / 2026</div>
-  <header class="site-header">
-    <a class="brand magnetic" href="index.html"><span class="brand-mark">M</span><span class="brand-text">MIKINCH<span class="brand-dot">.</span></span></a>
-    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav"><a href="index.html" data-nav="home">Главная</a><a href="services.html" data-nav="services">Услуги</a><a href="portfolio.html" data-nav="portfolio">Работы</a><a href="about.html" data-nav="about">Обо мне</a><a href="contact.html" data-nav="contact">Контакты</a></nav>
-    <a class="header-cta magnetic" href="contact.html"><span>Связаться</span><span class="arrow">↗</span></a>
-  </header>
-
-  <main>
-    <section class="inner-hero section">
-      <div class="inner-hero-content reveal">
-        <span class="section-index">SERVICES / MIKINCH</span>
-        <h1>Услуги без<br><span class="gradient-text">лишней сложности.</span></h1>
-        <p>Выбираем задачу, а не модный инструмент. Код, визуал и нейросети могу сочетать в одном проекте.</p>
-      </div>
-    </section>
-
-    <section class="section services-list">
-      <article id="development" class="service-detail reveal">
-        <div class="detail-index">01</div><div class="detail-main"><span class="detail-kicker">CODE / DIGITAL</span><h2>Разработка</h2><p>Соберу небольшой сайт, лендинг, Telegram-бота, утилиту или автоматизацию под конкретный процесс.</p><div class="tag-row"><span>HTML / CSS / JS</span><span>Telegram Bots</span><span>Automation</span><span>GitHub</span></div></div><div class="detail-arrow">↗</div>
-      </article>
-      <article id="design" class="service-detail reveal">
-        <div class="detail-index">02</div><div class="detail-main"><span class="detail-kicker">ART / VISUAL</span><h2>Арт & дизайн</h2><p>Аниме-стиль, аватарки, баннеры, обложки и карточки товаров. Могу рисовать вручную или использовать AI как часть процесса.</p><div class="tag-row"><span>Anime-style</span><span>Avatars</span><span>Banners</span><span>Marketplace Cards</span></div></div><div class="detail-arrow">↗</div>
-      </article>
-      <article id="presentations" class="service-detail reveal">
-        <div class="detail-index">03</div><div class="detail-main"><span class="detail-kicker">PRESENTATION / AI</span><h2>Презентации</h2><p>Презентации под учебные, рабочие и личные задачи. Canva, Gamma без водяных знаков, Google NotebookLM и ручная доработка.</p><div class="tag-row"><span>Canva</span><span>Gamma</span><span>NotebookLM</span><span>Storytelling</span></div></div><div class="detail-arrow">↗</div>
-      </article>
-      <article id="support" class="service-detail reveal">
-        <div class="detail-index">04</div><div class="detail-main"><span class="detail-kicker">SUPPORT / CONVERSATION</span><h2>Персональная поддержка</h2><p>Можно прийти с ситуацией, в которой нужно выговориться, что-то спокойно разложить по полочкам или взглянуть на вопрос со стороны.</p><div class="support-note">Это не медицинская или психотерапевтическая услуга. Советы — информационная поддержка; решения и ответственность за действия остаются за человеком.</div></div><div class="detail-arrow">↗</div>
-      </article>
-    </section>
+</div>
+<div class="glitch-layer" aria-hidden="true"></div>
 
 
-    <section class="section terminal-section">
-      <div class="section-heading reveal"><span class="section-index">03 — CONSOLE LOGS</span><h2>Пока код работает,<br><span class="muted">можно посмотреть на лог.</span></h2><p>Это декоративные мини-консоли: команды здесь симулируются специально для интерфейса и ничего не запускают на вашем компьютере.</p></div>
-      <div class="terminal-grid">
-        <div class="terminal-window reveal"><div class="terminal-bar"><span class="terminal-dots"><i></i><i></i><i></i></span><b>PowerShell</b><span>PS</span></div><div class="terminal-body" data-terminal="powershell"><span class="terminal-caret">█</span></div></div>
-        <div class="terminal-window reveal reveal-delay-1"><div class="terminal-bar"><span class="terminal-dots"><i></i><i></i><i></i></span><b>git-bash</b><span>GIT</span></div><div class="terminal-body" data-terminal="git"><span class="terminal-caret">█</span></div></div>
-      </div>
-    </section>
+<header class="topbar">
+  <a class="identity" href="index.html" data-transition>
+    <span class="identity-mark">M</span>
+    <span class="identity-copy">
+      <b>MIKINCH</b>
+      <small>PERSONAL DIGITAL NODE</small>
+    </span>
+  </a>
 
-    <section class="section quote-section reveal">
-      <div class="quote-mark">“</div><p class="quote-text">Хороший цифровой продукт — это не количество эффектов. Это ощущение, что всё на своём месте.</p><span class="quote-author">— Mikinch</span>
-    </section>
-  </main>
+  <div class="hud-status">
+    <span><i class="live-dot"></i> NODE 00</span>
+    <span>NET LOCAL</span>
+    <span id="hud-clock">00:00:00</span>
+  </div>
 
-  <footer class="site-footer"><div><span>© <span id="year"></span> Mikinch</span><span class="footer-dot">•</span><span>Digital creator</span></div><div><span>Built with intention</span><span>↗</span></div></footer>
-  <script src="data/profile.js"></script><script src="script.js"></script>
+  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav">
+    <a href="index.html" data-page-link="home" data-transition>Главная</a>
+    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
+    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
+    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
+    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
+  </nav>
+</header>
+
+<main>
+<section class="inner-screen services-screen">
+  <div class="inner-header">
+    <div><span class="kicker">01 / SERVICES</span><h1>Четыре ветки.<br><span>Один Mikinch.</span></h1></div>
+    <div class="inner-side-note">MODULES / READY</div>
+  </div>
+
+  <div class="services-stack">
+    <article id="development" class="service-panel red-panel">
+      <div class="service-index">01</div>
+      <div class="service-copy"><span class="service-tag">EXEC / CODE</span><h2>Разработка</h2><p>Сайты, Telegram-боты, небольшие программы, автоматизация и всё, что можно собрать из кода.</p><div class="service-tags"><i>HTML / CSS / JS</i><i>Telegram</i><i>automation</i></div></div>
+      <div class="panel-terminal terminal" data-terminal="code"><div class="terminal-head"><span>cmd</span><span>build.log</span></div><div class="terminal-body"></div><div class="terminal-cursor">█</div></div>
+    </article>
+
+    <article id="design" class="service-panel brown-panel">
+      <div class="service-index">02</div>
+      <div class="service-copy"><span class="service-tag">DRAW / VISUAL</span><h2>Арт & дизайн</h2><p>Anime-стиль, аватарки, баннеры, обложки и карточки товаров — вручную или с AI как частью процесса.</p><div class="service-tags"><i>anime</i><i>avatars</i><i>banners</i></div></div>
+      <div class="service-orbit-art"><span>M</span><i></i><b></b></div>
+    </article>
+
+    <article id="presentations" class="service-panel violet-panel">
+      <div class="service-index">03</div>
+      <div class="service-copy"><span class="service-tag">BUILD / STORY</span><h2>Презентации</h2><p>Canva, Gamma без водяных знаков, Google NotebookLM и ручная доработка. От плана до готового файла.</p><div class="service-tags"><i>Canva</i><i>Gamma</i><i>NotebookLM</i></div></div>
+      <div class="slide-stack"><span>01</span><span>02</span><span>03</span></div>
+    </article>
+
+    <article id="support" class="service-panel green-panel">
+      <div class="service-index">04</div>
+      <div class="service-copy"><span class="service-tag">OFFLINE / TALK</span><h2>Персональная поддержка</h2><p>Можно выговориться, разобрать ситуацию, получить понятное объяснение и взгляд со стороны.</p><div class="support-warning">Не медицинская и не психотерапевтическая услуга. Решения и ответственность за действия остаются за человеком.</div></div>
+      <div class="green-console terminal" data-terminal="support"><div class="terminal-head"><span>powershell</span><span>session.ps1</span></div><div class="terminal-body"></div><div class="terminal-cursor">█</div></div>
+    </article>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-left">
+    <span>MIKINCH / 2026</span>
+    <span class="footer-sep">•</span>
+    <span>LOCAL CREATIVE NODE</span>
+  </div>
+  <div class="footer-right">
+    <a href="contact.html" data-transition>CONTACT</a>
+    <span>↗</span>
+  </div>
+</footer>
+
+<script src="data/profile.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

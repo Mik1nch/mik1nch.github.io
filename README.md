@@ -1,52 +1,51 @@
-# Mikinch — personal website
+# Mikinch
 
-Статический сайт-визитка для GitHub Pages.
+Personal portfolio / contact site for the Mikinch alias.
 
-## Структура
+## Structure
 
-- `index.html` — главная
-- `services.html` — услуги
-- `portfolio.html` — портфолио
-- `about.html` — обо мне
-- `contact.html` — контакты
-- `profile.html` — профиль
-- `style.css` — дизайн и анимации
-- `script.js` — интерактивность
-- `data/profile.js` — информация, которую удобно менять
+- `index.html` — main page
+- `services.html` — services
+- `portfolio.html` — portfolio archive
+- `about.html` — personal dossier
+- `contact.html` — contact channels
+- `profile.html` — compact public profile
+- `style.css` — visual system
+- `script.js` — interactions, terminals, boot transition
+- `data/profile.js` — editable profile and contact links
+- `assets/avatar/` — avatar files
+- `assets/portfolio/` — portfolio media
 
-## Как менять профиль
+## GitHub Pages
 
-Открой `data/profile.js` и измени значения в объекте `MIKINCH_PROFILE`.
+Repository name: `mik1nch.github.io`
 
-## Как добавить контакты
+GitHub:
+`Settings` → `Pages` → `Deploy from a branch` → `main` → `/ (root)`.
 
-В том же файле замени:
+## Profile and contacts
 
-```js
-contacts: {
-  telegram: "#",
-  discord: "#",
-  email: "#",
-  github: "#"
-}
-```
+Edit `data/profile.js` to change the public profile text or social links.
 
-на реальные ссылки.
+## Avatar
 
-## Публикация
+Put the preferred avatar at:
 
-Репозиторий должен называться `mik1nch.github.io`, а GitHub Pages можно включить в:
+`assets/avatar/mikinch-avatar.webp`
 
-**Settings → Pages → Deploy from a branch → main → / (root)**
+The layout contains a fallback monogram until an avatar file is present.
 
-## Контакты
+## Portfolio
 
-Основные публичные ссылки хранятся в `data/profile.js`. Сейчас подключены Telegram, TikTok и Pinterest.
+Public portfolio is intentionally empty until projects are selected for publication.
+Visitors are directed to the contact page for private examples.
 
+## Motion
 
-## v5 visual system
+The site uses:
+- fast boot transitions,
+- page-to-page boot overlays,
+- terminal typewriter effects,
+- rare glitch bursts.
 
-- Fast boot screen with irregular progress jumps.
-- Same boot sequence on internal page navigation.
-- Rare glitch bursts in cherry, dark green and purple.
-- Motion effects respect `prefers-reduced-motion`.
+Motion is reduced automatically when the browser reports `prefers-reduced-motion`.

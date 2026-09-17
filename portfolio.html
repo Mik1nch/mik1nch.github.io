@@ -1,78 +1,104 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Портфолио Mikinch — разработка, anime-art, дизайн и презентации.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080807">
+  <meta name="description" content="Работы — Mikinch">
   <title>Работы — Mikinch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body data-page="portfolio">
 
-  <div class="boot-screen" aria-hidden="true">
-    <div class="boot-shell">
-      <div class="boot-head">
-        <span>MIKINCH://BOOT</span>
-        <span class="boot-state">INIT</span>
-      </div>
-      <div class="boot-code">
-        <div><span class="boot-prompt">C:\MIKINCH&gt;</span> <span class="boot-live-line">initializing creative node...</span><span class="boot-caret">█</span></div>
-        <div class="boot-subline">loading interface modules / local visual layer / no external connection</div>
-      </div>
-      <div class="boot-progress-wrap">
-        <div class="boot-progress"><span></span></div>
-        <div class="boot-percent">00%</div>
-      </div>
-      <div class="boot-foot">
-        <span>BOOT SEQUENCE</span>
-        <span>MK / LOCAL</span>
-      </div>
+<div class="boot-overlay" aria-hidden="true">
+  <div class="boot-frame">
+    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
+    <div class="boot-title">loading <em>personality.exe</em></div>
+    <div class="boot-lines">
+      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
+      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
+      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
+    </div>
+    <div class="boot-progress">
+      <span data-boot-bar></span>
+    </div>
+    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
+  </div>
+</div>
+<div class="glitch-layer" aria-hidden="true"></div>
+
+
+<header class="topbar">
+  <a class="identity" href="index.html" data-transition>
+    <span class="identity-mark">M</span>
+    <span class="identity-copy">
+      <b>MIKINCH</b>
+      <small>PERSONAL DIGITAL NODE</small>
+    </span>
+  </a>
+
+  <div class="hud-status">
+    <span><i class="live-dot"></i> NODE 00</span>
+    <span>NET LOCAL</span>
+    <span id="hud-clock">00:00:00</span>
+  </div>
+
+  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav">
+    <a href="index.html" data-page-link="home" data-transition>Главная</a>
+    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
+    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
+    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
+    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
+  </nav>
+</header>
+
+<main>
+<section class="inner-screen portfolio-screen">
+  <div class="archive-header">
+    <div><span class="kicker">02 / ARCHIVE</span><h1>Работы.<br><span>Пока пусто.</span></h1></div>
+    <div class="archive-state">STATUS: <b>WAITING FOR UPLOAD</b></div>
+  </div>
+
+  <div class="archive-empty">
+    <div class="archive-terminal terminal" data-terminal="portfolio">
+      <div class="terminal-head"><span>git-bash</span><span>portfolio.log</span></div>
+      <div class="terminal-body"></div><div class="terminal-cursor">█</div>
+    </div>
+
+    <div class="archive-note">
+      <span class="stamp">ARCHIVE LOCKED</span>
+      <h2>Автор пока не добавил сюда свои проекты.</h2>
+      <p>Чтобы увидеть реальные работы Mikinch, напиши лично через контакты. Примеры, кейсы и изображения отправляются напрямую.</p>
+      <a href="contact.html" class="action-chip primary" data-transition>запросить примеры <b>↗</b></a>
     </div>
   </div>
-  <div class="glitch-flash" aria-hidden="true"></div>
 
-  <div class="cursor-glow" aria-hidden="true"></div><div class="page-noise" aria-hidden="true"></div><div class="corner-code" aria-hidden="true">MK / DIGITAL / 2026</div>
-  <header class="site-header">
-    <a class="brand magnetic" href="index.html"><span class="brand-mark">M</span><span class="brand-text">MIKINCH<span class="brand-dot">.</span></span></a>
-    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav"><a href="index.html" data-nav="home">Главная</a><a href="services.html" data-nav="services">Услуги</a><a href="portfolio.html" data-nav="portfolio">Работы</a><a href="about.html" data-nav="about">Обо мне</a><a href="contact.html" data-nav="contact">Контакты</a></nav>
-    <a class="header-cta magnetic" href="contact.html"><span>Связаться</span><span class="arrow">↗</span></a>
-  </header>
+  <div class="archive-aside">
+    <span>PUBLIC VIEW</span>
+    <span>NO DEMOS / NO FAKE CASES</span>
+    <span>MORE SOON</span>
+  </div>
+</section>
+</main>
 
-  <main>
-    <section class="inner-hero section">
-      <div class="inner-hero-content reveal"><span class="section-index">PORTFOLIO / SELECTED WORK</span><h1>Работы.<br><span class="gradient-text">Проекты. Эксперименты.</span></h1><p>Реальные кейсы ещё не загружены. Пока здесь — структура, визуальные заглушки и место под твои настоящие проекты.</p></div>
-    </section>
+<footer class="footer">
+  <div class="footer-left">
+    <span>MIKINCH / 2026</span>
+    <span class="footer-sep">•</span>
+    <span>LOCAL CREATIVE NODE</span>
+  </div>
+  <div class="footer-right">
+    <a href="contact.html" data-transition>CONTACT</a>
+    <span>↗</span>
+  </div>
+</footer>
 
-    <section class="section portfolio-grid-full">
-      <article class="portfolio-card portfolio-card-wide reveal tilt-card">
-        <div class="work-visual visual-code big"><span class="code-line l1"></span><span class="code-line l2"></span><span class="code-line l3"></span><span class="code-line l4"></span><span class="code-line l5"></span><span class="code-caret">_</span></div>
-        <div class="portfolio-info"><span>01 / DEVELOPMENT</span><h2>Web / Bot / Automation</h2><p>Добавим сюда первый настоящий проект и коротко опишем задачу, решение и результат.</p></div>
-      </article>
-      <article class="portfolio-card reveal tilt-card">
-        <div class="work-visual visual-art big"><span class="art-glow"></span><span class="art-shape shape-a"></span><span class="art-shape shape-b"></span><span class="art-label">ANIME<br>VISUAL</span></div>
-        <div class="portfolio-info"><span>02 / ART</span><h2>Anime Character</h2><p>Место для арт-кейса.</p></div>
-      </article>
-      <article class="portfolio-card reveal reveal-delay-1 tilt-card">
-        <div class="work-visual visual-slide big"><div class="slide-grid"><i></i><i></i><i></i><i></i></div><span class="slide-title">STORY<br>BY DESIGN</span></div>
-        <div class="portfolio-info"><span>03 / PRESENTATION</span><h2>Presentation / AI</h2><p>Декоративная заглушка. Ждём настоящий проект.</p></div>
-      </article>
-      <article class="portfolio-card reveal reveal-delay-2 tilt-card">
-        <div class="work-visual visual-product big"><div class="product-card-mini"><span class="product-glow"></span><span>PRODUCT<br>01</span></div></div>
-        <div class="portfolio-info"><span>04 / DESIGN</span><h2>Marketplace Card</h2><p>Декоративная заглушка. Ждём настоящий кейс.</p></div>
-      </article>
-    </section>
-
-    <section class="section portfolio-empty-note reveal">
-      <div class="empty-note-mark">!</div>
-      <div><span class="section-index">PORTFOLIO STATUS</span><h2>Автор пока не добавил свои работы на сайт.</h2><p>Хочешь увидеть реальные проекты Mikinch? Напиши ему лично через контактные данные — он отправит примеры работ и кейсы.</p></div>
-      <a class="button button-ghost magnetic" href="contact.html"><span>Запросить работы</span><span>↗</span></a>
-    </section>
-
-  </main>
-
-  <footer class="site-footer"><div><span>© <span id="year"></span> Mikinch</span><span class="footer-dot">•</span><span>Digital creator</span></div><div><span>Built with intention</span><span>↗</span></div></footer>
-  <script src="data/profile.js"></script><script src="script.js"></script>
+<script src="data/profile.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

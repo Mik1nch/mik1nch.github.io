@@ -1,77 +1,154 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="О Mikinch — разработчик, digital creator и художник.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080807">
+  <meta name="description" content="Обо мне — Mikinch">
   <title>Обо мне — Mikinch</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body data-page="about">
 
-  <div class="boot-screen" aria-hidden="true">
-    <div class="boot-shell">
-      <div class="boot-head">
-        <span>MIKINCH://BOOT</span>
-        <span class="boot-state">INIT</span>
+<div class="boot-overlay" aria-hidden="true">
+  <div class="boot-frame">
+    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
+    <div class="boot-title">loading <em>personality.exe</em></div>
+    <div class="boot-lines">
+      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
+      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
+      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
+    </div>
+    <div class="boot-progress">
+      <span data-boot-bar></span>
+    </div>
+    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
+  </div>
+</div>
+<div class="glitch-layer" aria-hidden="true"></div>
+
+
+<header class="topbar">
+  <a class="identity" href="index.html" data-transition>
+    <span class="identity-mark">M</span>
+    <span class="identity-copy">
+      <b>MIKINCH</b>
+      <small>PERSONAL DIGITAL NODE</small>
+    </span>
+  </a>
+
+  <div class="hud-status">
+    <span><i class="live-dot"></i> NODE 00</span>
+    <span>NET LOCAL</span>
+    <span id="hud-clock">00:00:00</span>
+  </div>
+
+  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav">
+    <a href="index.html" data-page-link="home" data-transition>Главная</a>
+    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
+    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
+    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
+    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
+  </nav>
+</header>
+
+<main>
+<section class="inner-screen about-screen">
+  <div class="dossier-head">
+    <span class="kicker">03 / DOSSIER</span>
+    <div class="dossier-code">ID::MK-0001 / PUBLIC PROFILE</div>
+  </div>
+
+  <div class="dossier-grid">
+    <aside class="dossier-card">
+      <div class="dossier-photo">
+        <img src="assets/avatar/mikinch-avatar.webp" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+        <div class="portrait-fallback">M</div>
+        <div class="photo-scan"></div>
       </div>
-      <div class="boot-code">
-        <div><span class="boot-prompt">C:\MIKINCH&gt;</span> <span class="boot-live-line">initializing creative node...</span><span class="boot-caret">█</span></div>
-        <div class="boot-subline">loading interface modules / local visual layer / no external connection</div>
+      <div class="dossier-name">
+        <strong data-profile-name>Mikinch</strong>
+        <span>@mikinch</span>
       </div>
-      <div class="boot-progress-wrap">
-        <div class="boot-progress"><span></span></div>
-        <div class="boot-percent">00%</div>
+      <div class="dossier-facts">
+        <div><span>BASE</span><b data-profile-location>Uzbekistan</b></div>
+        <div><span>ROLE</span><b data-profile-role>Digital creator</b></div>
+        <div><span>MODE</span><b>anonymous</b></div>
+        <div><span>STATUS</span><b class="green-text">online</b></div>
       </div>
-      <div class="boot-foot">
-        <span>BOOT SEQUENCE</span>
-        <span>MK / LOCAL</span>
+      <div class="dossier-terminal terminal" data-terminal="about">
+        <div class="terminal-head"><span>cmd</span><span>about.log</span></div>
+        <div class="terminal-body"></div><div class="terminal-cursor">█</div>
       </div>
+    </aside>
+
+    <div class="dossier-main">
+      <article class="dossier-block dossier-intro">
+        <span class="block-id">A / IDENTITY</span>
+        <h1 data-profile-headline>Не укладываюсь в одну профессию — и не собираюсь.</h1>
+        <p data-profile-bio></p>
+      </article>
+
+      <article class="dossier-block">
+        <span class="block-id">B / WHAT I DO</span>
+        <div class="statement-grid">
+          <div><b>CODE</b><span>сайты / боты / программы</span></div>
+          <div><b>ART</b><span>anime / аватарки / баннеры</span></div>
+          <div><b>DECKS</b><span>презентации / AI / визуал</span></div>
+          <div><b>SUPPORT</b><span>разговор / разбор / совет</span></div>
+        </div>
+      </article>
+
+      <article id="off-clock" class="dossier-block off-clock">
+        <span class="block-id">C / OFF THE CLOCK</span>
+        <div class="off-clock-grid">
+          <div class="interest">
+            <span class="interest-icon">◫</span>
+            <h3>Геймер</h3>
+            <p>Железо не всегда играет на моей стороне, поэтому любимый жанр — «хорошая оптимизация». Brawl Stars, Roblox, страшилки и разные необычные взрослые режимы.</p>
+            <div class="interest-code">fps > ego</div>
+          </div>
+          <div class="interest">
+            <span class="interest-icon">♫</span>
+            <h3>Музыка</h3>
+            <p>Музыка — постоянный фон. Отдельный саундтрек для работы, игр и ночных залипаний.</p>
+            <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="interest wide">
+            <span class="interest-icon">⌁</span>
+            <h3>Аниме & визуал</h3>
+            <p>Люблю рисовать и собирать визуальные миры в anime-стилистике. Поэтому арт для меня — не «дополнительная услуга», а одна из основных частей личности Mikinch.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="dossier-block">
+        <span class="block-id">D / PERSONAL NOTE</span>
+        <blockquote>«Лицо можно оставить за кадром. Характер — нет.»</blockquote>
+      </article>
     </div>
   </div>
-  <div class="glitch-flash" aria-hidden="true"></div>
+</section>
+</main>
 
-  <div class="cursor-glow" aria-hidden="true"></div><div class="page-noise" aria-hidden="true"></div><div class="corner-code" aria-hidden="true">MK / DIGITAL / 2026</div>
-  <header class="site-header">
-    <a class="brand magnetic" href="index.html"><span class="brand-mark">M</span><span class="brand-text">MIKINCH<span class="brand-dot">.</span></span></a>
-    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav"><a href="index.html" data-nav="home">Главная</a><a href="services.html" data-nav="services">Услуги</a><a href="portfolio.html" data-nav="portfolio">Работы</a><a href="about.html" data-nav="about">Обо мне</a><a href="contact.html" data-nav="contact">Контакты</a></nav>
-    <a class="header-cta magnetic" href="contact.html"><span>Связаться</span><span class="arrow">↗</span></a>
-  </header>
+<footer class="footer">
+  <div class="footer-left">
+    <span>MIKINCH / 2026</span>
+    <span class="footer-sep">•</span>
+    <span>LOCAL CREATIVE NODE</span>
+  </div>
+  <div class="footer-right">
+    <a href="contact.html" data-transition>CONTACT</a>
+    <span>↗</span>
+  </div>
+</footer>
 
-  <main>
-    <section class="inner-hero section">
-      <div class="inner-hero-content reveal"><span class="section-index">ABOUT / PROFILE</span><h1>Привет. Я <span class="gradient-text" data-profile-name>Mikinch</span>.</h1><p data-profile-intro>Универсальный digital creator: код, визуал, AI и немного человеческой поддержки.</p></div>
-    </section>
-
-    <section class="section about-layout">
-      <div class="profile-card reveal tilt-card">
-        <div class="profile-avatar"><div class="profile-avatar-inner">M</div></div>
-        <span class="profile-handle">@mikinch</span>
-        <span class="profile-location" data-profile-location>Uzbekistan</span>
-        <div class="profile-line"></div>
-        <div class="profile-status"><span class="status-dot"></span> accepting selected projects</div>
-      </div>
-
-      <div class="about-copy">
-        <div class="about-block reveal"><span class="section-index">01 — WHO</span><h2>Анонимность — часть бренда.</h2><p>Здесь не обязательно показывать лицо, чтобы показывать качество работы. Mikinch — псевдоним и визуальный образ, который позволяет отделить личную жизнь от проектов.</p></div>
-        <div class="about-block reveal"><span class="section-index">02 — HOW</span><h2>Инструмент выбирается под задачу.</h2><p>Где-то быстрее написать код самому. Где-то эффективнее взять AI, шаблон Canva или готовую библиотеку. Важнее конечный результат и удобство использования.</p></div>
-        <div class="about-block reveal"><span class="section-index">03 — PROFILE</span><div class="facts-grid"><div><span>Base</span><strong data-profile-location>Uzbekistan</strong></div><div><span>Focus</span><strong>Code · Art · AI</strong></div><div><span>Format</span><strong>Online</strong></div><div><span>Status</span><strong>Open to projects</strong></div></div></div>
-      </div>
-
-    <section class="section hobby-section">
-      <div class="section-heading reveal"><span class="section-index">04 — OFF THE CLOCK</span><h2>Когда не кодирую —<br><span class="muted">залипаю, слушаю, исследую.</span></h2></div>
-      <div class="hobby-grid">
-        <article class="hobby-card reveal tilt-card"><span class="hobby-no">01</span><div class="hobby-icon">⌁</div><h3>Геймер</h3><p>Железо не всегда балует мощностью, поэтому люблю хорошо оптимизированные игры, Brawl Stars, Roblox и необычные режимы, включая 18+ форматы.</p><span class="hobby-tag">LOW-END / HIGH-VIBE</span></article>
-        <article class="hobby-card reveal reveal-delay-1 tilt-card"><span class="hobby-no">02</span><div class="hobby-icon">♫</div><h3>Музыка</h3><p>Музыка — отдельная часть настроения. Отсюда и любовь к атмосфере, ритму и странным маленьким звукам в интерфейсах.</p><span class="hobby-tag">LISTENING MODE</span></article>
-        <article class="hobby-card reveal reveal-delay-2 tilt-card"><span class="hobby-no">03</span><div class="hobby-icon">↯</div><h3>Немного дерзости</h3><p>Не люблю одинаковые корпоративные визитки. Поэтому здесь могут встретиться терминал, красные маркеры, странная подпись и лёгкое ощущение «а что это сейчас было?».</p><span class="hobby-tag">NO BORING UI</span></article>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer"><div><span>© <span id="year"></span> Mikinch</span><span class="footer-dot">•</span><span>Digital creator</span></div><div><span>Built with intention</span><span>↗</span></div></footer>
-  <script src="data/profile.js"></script><script src="script.js"></script>
+<script src="data/profile.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
