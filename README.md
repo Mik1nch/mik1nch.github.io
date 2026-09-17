@@ -38,3 +38,7 @@ contacts: {
 Репозиторий должен называться `mik1nch.github.io`, а GitHub Pages можно включить в:
 
 **Settings → Pages → Deploy from a branch → main → / (root)**
+
+## Контакты
+
+Основные публичные ссылки хранятся в `data/profile.js`. Сейчас подключены Telegram, TikTok и Pinterest.
