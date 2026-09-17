@@ -1,107 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080807">
-  <meta name="description" content="Профиль — Mikinch">
-  <title>Профиль — Mikinch</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mikinch — Short profile dossier." />
+  <title>PROFILE — MIKINCH</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="profile">
-
-<div class="boot-overlay" aria-hidden="true">
-  <div class="boot-frame">
-    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
-    <div class="boot-title">loading <em>personality.exe</em></div>
-    <div class="boot-lines">
-      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
-    </div>
-    <div class="boot-progress">
-      <span data-boot-bar></span>
-    </div>
-    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
-  </div>
-</div>
-<div class="glitch-layer" aria-hidden="true"></div>
-
-
-<header class="topbar">
-  <a class="identity" href="index.html" data-transition>
-    <span class="identity-mark">M</span>
-    <span class="identity-copy">
-      <b>MIKINCH</b>
-      <small>PERSONAL DIGITAL NODE</small>
-    </span>
-  </a>
-
-  <div class="hud-status">
-    <span><i class="live-dot"></i> NODE 00</span>
-    <span>NET LOCAL</span>
-    <span id="hud-clock">00:00:00</span>
+<body>
+  <div id="boot-screen" class="boot-screen" aria-hidden="true">
+    <div class="boot-logo">MIKINCH</div>
+    <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
+    <div class="boot-log"><span>&gt;</span> reading profile…</div>
   </div>
 
-  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="nav">
-    <a href="index.html" data-page-link="home" data-transition>Главная</a>
-    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
-    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
-    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
-    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
-  </nav>
-</header>
-
-<main>
-<section class="inner-screen profile-screen">
-  <div class="profile-shell">
-    <div class="profile-top">
-      <span class="kicker">05 / PROFILE</span>
-      <span>MK::PUBLIC NODE</span>
-    </div>
-    <div class="profile-hero">
-      <div class="profile-title">
-        <span>ALIAS</span>
-        <h1 data-profile-name>Mikinch</h1>
-        <p data-profile-description></p>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="header-brand">
+        <span class="name">MIKINCH</span>
+        <span class="sub">Personal Digital Node</span>
       </div>
-      <div class="profile-portrait">
-        <img src="assets/avatar/mikinch-avatar.webp" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-        <div class="portrait-fallback">M</div>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span>LOCAL / ONLINE</span>
+        <span class="header-time" id="header-time">--:--:--</span>
       </div>
-    </div>
-    <div class="profile-data-grid">
-      <div><span>LOCATION</span><b data-profile-location>Uzbekistan</b></div>
-      <div><span>ROLE</span><b data-profile-role>Digital creator</b></div>
-      <div><span>FOCUS</span><b>code / art / visual</b></div>
-      <div><span>MODE</span><b>online</b></div>
-    </div>
-    <div class="profile-note">
-      <div class="note-number">/</div>
-      <p>Псевдоним вместо лица. Работы вместо длинного резюме. Любопытство вместо одной должности.</p>
-    </div>
-  </div>
-</section>
-</main>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">MENU</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="portfolio.html">WORKS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="profile.html" class="active">PROFILE</a>
+      </nav>
+    </header>
 
-<footer class="footer">
-  <div class="footer-left">
-    <span>MIKINCH / 2026</span>
-    <span class="footer-sep">•</span>
-    <span>LOCAL CREATIVE NODE</span>
-  </div>
-  <div class="footer-right">
-    <a href="contact.html" data-transition>CONTACT</a>
-    <span>↗</span>
-  </div>
-</footer>
+    <main class="site-main">
+      <div class="page-head reveal" style="text-align: center;">
+        <h1>PROFILE</h1>
+        <p class="sub">SHORT DOSSIER</p>
+      </div>
 
-<script src="data/profile.js"></script>
-<script src="script.js"></script>
+      <div class="profile-short reveal">
+        <h1>MIKINCH</h1>
+        <div class="field">
+          <span>ALIAS</span>
+          <span>Mikinch</span>
+        </div>
+        <div class="field">
+          <span>LOCATION</span>
+          <span>Digital Node / Anywhere</span>
+        </div>
+        <div class="field">
+          <span>ROLE</span>
+          <span>Digital Creator</span>
+        </div>
+        <div class="field">
+          <span>FOCUS</span>
+          <span>Art · Code · Slides · Support</span>
+        </div>
+        <div class="field">
+          <span>MODE</span>
+          <span>Anonymous</span>
+        </div>
+        <div class="field">
+          <span>STATUS</span>
+          <span>ONLINE</span>
+        </div>
+      </div>
+
+      <div class="mt-2 reveal" style="max-width: 420px; margin-left: auto; margin-right: auto;">
+        <div class="terminal" data-shell="powershell">
+          <div class="terminal-header">
+            <span>PowerShell — profile</span>
+            <span>Get-Identity</span>
+          </div>
+          <div class="terminal-body"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>MIKINCH // PERSONAL DIGITAL NODE</span>
+      <span>v1.0 · static</span>
+    </footer>
+  </div>
+
+  <script src="data/profile.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

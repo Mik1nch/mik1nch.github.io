@@ -1,154 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080807">
-  <meta name="description" content="Обо мне — Mikinch">
-  <title>Обо мне — Mikinch</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mikinch — About. Personal dossier." />
+  <title>ABOUT — MIKINCH</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="about">
-
-<div class="boot-overlay" aria-hidden="true">
-  <div class="boot-frame">
-    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
-    <div class="boot-title">loading <em>personality.exe</em></div>
-    <div class="boot-lines">
-      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
-    </div>
-    <div class="boot-progress">
-      <span data-boot-bar></span>
-    </div>
-    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
-  </div>
-</div>
-<div class="glitch-layer" aria-hidden="true"></div>
-
-
-<header class="topbar">
-  <a class="identity" href="index.html" data-transition>
-    <span class="identity-mark">M</span>
-    <span class="identity-copy">
-      <b>MIKINCH</b>
-      <small>PERSONAL DIGITAL NODE</small>
-    </span>
-  </a>
-
-  <div class="hud-status">
-    <span><i class="live-dot"></i> NODE 00</span>
-    <span>NET LOCAL</span>
-    <span id="hud-clock">00:00:00</span>
+<body>
+  <div id="boot-screen" class="boot-screen" aria-hidden="true">
+    <div class="boot-logo">MIKINCH</div>
+    <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
+    <div class="boot-log"><span>&gt;</span> loading dossier…</div>
   </div>
 
-  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="nav">
-    <a href="index.html" data-page-link="home" data-transition>Главная</a>
-    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
-    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
-    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
-    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
-  </nav>
-</header>
-
-<main>
-<section class="inner-screen about-screen">
-  <div class="dossier-head">
-    <span class="kicker">03 / DOSSIER</span>
-    <div class="dossier-code">ID::MK-0001 / PUBLIC PROFILE</div>
-  </div>
-
-  <div class="dossier-grid">
-    <aside class="dossier-card">
-      <div class="dossier-photo">
-        <img src="assets/avatar/mikinch-avatar.webp" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-        <div class="portrait-fallback">M</div>
-        <div class="photo-scan"></div>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="header-brand">
+        <span class="name">MIKINCH</span>
+        <span class="sub">Personal Digital Node</span>
       </div>
-      <div class="dossier-name">
-        <strong data-profile-name>Mikinch</strong>
-        <span>@mikinch</span>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span>LOCAL / ONLINE</span>
+        <span class="header-time" id="header-time">--:--:--</span>
       </div>
-      <div class="dossier-facts">
-        <div><span>BASE</span><b data-profile-location>Uzbekistan</b></div>
-        <div><span>ROLE</span><b data-profile-role>Digital creator</b></div>
-        <div><span>MODE</span><b>anonymous</b></div>
-        <div><span>STATUS</span><b class="green-text">online</b></div>
-      </div>
-      <div class="dossier-terminal terminal" data-terminal="about">
-        <div class="terminal-head"><span>cmd</span><span>about.log</span></div>
-        <div class="terminal-body"></div><div class="terminal-cursor">█</div>
-      </div>
-    </aside>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">MENU</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="portfolio.html">WORKS</a>
+        <a href="about.html" class="active">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="profile.html">PROFILE</a>
+      </nav>
+    </header>
 
-    <div class="dossier-main">
-      <article class="dossier-block dossier-intro">
-        <span class="block-id">A / IDENTITY</span>
-        <h1 data-profile-headline>Не укладываюсь в одну профессию — и не собираюсь.</h1>
-        <p data-profile-bio></p>
-      </article>
+    <main class="site-main">
+      <div class="page-head reveal">
+        <h1>DOSSIER</h1>
+        <p class="sub">PERSONAL FILE · ANONYMOUS MODE</p>
+      </div>
 
-      <article class="dossier-block">
-        <span class="block-id">B / WHAT I DO</span>
-        <div class="statement-grid">
-          <div><b>CODE</b><span>сайты / боты / программы</span></div>
-          <div><b>ART</b><span>anime / аватарки / баннеры</span></div>
-          <div><b>DECKS</b><span>презентации / AI / визуал</span></div>
-          <div><b>SUPPORT</b><span>разговор / разбор / совет</span></div>
+      <div class="dossier">
+        <aside class="dossier-id reveal">
+          <div class="avatar-wrap">
+            <img src="assets/avatar/avatar.png" alt="Mikinch" width="160" height="160" />
+            <span class="avatar-label">AVATAR</span>
+          </div>
+          <dl class="dossier-fields">
+            <dt>ID</dt>
+            <dd>MIK-01</dd>
+            <dt>ALIAS</dt>
+            <dd>Mikinch</dd>
+            <dt>LOCATION</dt>
+            <dd>Digital Node / Anywhere</dd>
+            <dt>ROLE</dt>
+            <dd>Digital Creator</dd>
+            <dt>STATUS</dt>
+            <dd>ONLINE</dd>
+            <dt>MODE</dt>
+            <dd>Anonymous</dd>
+          </dl>
+          <div class="mt-1">
+            <div class="terminal" data-shell="bash">
+              <div class="terminal-header"><span>bash</span><span>id</span></div>
+              <div class="terminal-body"></div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="dossier-modules">
+          <section class="dossier-block reveal">
+            <h3>WHAT I DO</h3>
+            <ul>
+              <li>Рисунок и anime-style art</li>
+              <li>Сайты</li>
+              <li>Код</li>
+              <li>Telegram-боты</li>
+              <li>Небольшие программы</li>
+              <li>Презентации</li>
+              <li>Дизайн</li>
+              <li>Аватарки и баннеры</li>
+              <li>Карточки товаров для маркетплейсов</li>
+              <li>AI-assisted visual/content work</li>
+              <li>Персональная поддержка / разговор</li>
+            </ul>
+          </section>
+
+          <section class="dossier-block reveal">
+            <h3>OFF THE CLOCK</h3>
+            <p><strong style="color: var(--cream);">Gaming</strong> — Геймер. Из-за слабого железа предпочитает хорошо оптимизированные игры. Brawl Stars, Roblox.</p>
+            <p class="mt-1"><strong style="color: var(--cream);">Music</strong> — Любит музыку.</p>
+            <p class="mt-1"><strong style="color: var(--cream);">Anime &amp; visual</strong> — Любит anime-style визуал. Страшилки. Различные взрослые режимы.</p>
+          </section>
+
+          <section class="dossier-block reveal">
+            <h3>PERSONAL NOTE</h3>
+            <p>Анонимность — часть образа. Лицо необязательно показывать. Это личный цифровой узел, а не корпоративная витрина.</p>
+          </section>
         </div>
-      </article>
+      </div>
+    </main>
 
-      <article id="off-clock" class="dossier-block off-clock">
-        <span class="block-id">C / OFF THE CLOCK</span>
-        <div class="off-clock-grid">
-          <div class="interest">
-            <span class="interest-icon">◫</span>
-            <h3>Геймер</h3>
-            <p>Железо не всегда играет на моей стороне, поэтому любимый жанр — «хорошая оптимизация». Brawl Stars, Roblox, страшилки и разные необычные взрослые режимы.</p>
-            <div class="interest-code">fps > ego</div>
-          </div>
-          <div class="interest">
-            <span class="interest-icon">♫</span>
-            <h3>Музыка</h3>
-            <p>Музыка — постоянный фон. Отдельный саундтрек для работы, игр и ночных залипаний.</p>
-            <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          </div>
-          <div class="interest wide">
-            <span class="interest-icon">⌁</span>
-            <h3>Аниме & визуал</h3>
-            <p>Люблю рисовать и собирать визуальные миры в anime-стилистике. Поэтому арт для меня — не «дополнительная услуга», а одна из основных частей личности Mikinch.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="dossier-block">
-        <span class="block-id">D / PERSONAL NOTE</span>
-        <blockquote>«Лицо можно оставить за кадром. Характер — нет.»</blockquote>
-      </article>
-    </div>
+    <footer class="site-footer">
+      <span>MIKINCH // PERSONAL DIGITAL NODE</span>
+      <span>v1.0 · static</span>
+    </footer>
   </div>
-</section>
-</main>
 
-<footer class="footer">
-  <div class="footer-left">
-    <span>MIKINCH / 2026</span>
-    <span class="footer-sep">•</span>
-    <span>LOCAL CREATIVE NODE</span>
-  </div>
-  <div class="footer-right">
-    <a href="contact.html" data-transition>CONTACT</a>
-    <span>↗</span>
-  </div>
-</footer>
-
-<script src="data/profile.js"></script>
-<script src="script.js"></script>
+  <script src="data/profile.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

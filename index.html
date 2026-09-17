@@ -1,200 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080807">
-  <meta name="description" content="Главная — Mikinch">
-  <title>Главная — Mikinch</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mikinch — Personal Digital Node. Digital creator." />
+  <title>MIKINCH — Personal Digital Node</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="home">
-
-<div class="boot-overlay" aria-hidden="true">
-  <div class="boot-frame">
-    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
-    <div class="boot-title">loading <em>personality.exe</em></div>
-    <div class="boot-lines">
-      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
-    </div>
-    <div class="boot-progress">
-      <span data-boot-bar></span>
-    </div>
-    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
-  </div>
-</div>
-<div class="glitch-layer" aria-hidden="true"></div>
-
-
-<header class="topbar">
-  <a class="identity" href="index.html" data-transition>
-    <span class="identity-mark">M</span>
-    <span class="identity-copy">
-      <b>MIKINCH</b>
-      <small>PERSONAL DIGITAL NODE</small>
-    </span>
-  </a>
-
-  <div class="hud-status">
-    <span><i class="live-dot"></i> NODE 00</span>
-    <span>NET LOCAL</span>
-    <span id="hud-clock">00:00:00</span>
+<body>
+  <!-- Boot -->
+  <div id="boot-screen" class="boot-screen" aria-hidden="true">
+    <div class="boot-logo">MIKINCH</div>
+    <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
+    <div class="boot-log"><span>&gt;</span> waking node…</div>
   </div>
 
-  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <nav class="nav">
-    <a href="index.html" data-page-link="home" data-transition>Главная</a>
-    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
-    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
-    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
-    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
-  </nav>
-</header>
-
-<main>
-<section class="screen home-screen">
-  <div class="edge-label edge-left">M / DIGITAL / 001</div>
-  <div class="edge-label edge-right">ONLINE / UZ</div>
-
-  <div class="home-topline">
-    <span>NO EXTERNAL CONNECTION</span>
-    <span>MEM <b>72%</b></span>
-    <span>LOC <b>00.000</b></span>
-  </div>
-
-  <div class="home-grid">
-    <div class="hero-copy">
-      <div class="kicker">01 / MIKINCH</div>
-      <h1 class="hero-title">
-        <span>digital</span>
-        <span class="accent-stroke">chaos</span>
-        <span>with a purpose.</span>
-      </h1>
-      <p class="hero-text" data-profile-intro></p>
-      <div class="hero-actions">
-        <a class="action-chip primary" href="services.html" data-transition>открыть услуги <b>↗</b></a>
-        <a class="action-chip" href="portfolio.html" data-transition>архив работ <b>01/??</b></a>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="header-brand">
+        <span class="name">MIKINCH</span>
+        <span class="sub">Personal Digital Node</span>
       </div>
-      <div class="hero-micro">
-        <span><i class="live-dot"></i> available for selected projects</span>
-        <span>UZ / ONLINE</span>
+      <div class="header-status">
+        <span class="status-dot" title="ONLINE"></span>
+        <span>LOCAL / ONLINE</span>
+        <span class="header-time" id="header-time">--:--:--</span>
       </div>
-    </div>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">MENU</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="active">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="portfolio.html">WORKS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="profile.html">PROFILE</a>
+      </nav>
+    </header>
 
-    <div class="hero-portrait">
-      <div class="portrait-frame">
-        <div class="portrait-corners"></div>
-        <div class="portrait-meta">
-          <span>IDENTITY: ANONYMOUS</span>
-          <span>MODE: CREATOR</span>
+    <main class="site-main">
+      <section class="hero">
+        <div class="hero-text reveal">
+          <div class="hero-eyebrow">SYS // NODE-01 // ANONYMOUS MODE</div>
+          <h1 class="hero-title">MIKINCH</h1>
+          <p class="hero-phrase">Digital creator. Technical. A bit bold. Slightly strange. Carefully chaotic.</p>
+          <div class="hero-meta">
+            <span>ART</span>
+            <span>CODE</span>
+            <span>SLIDES</span>
+            <span>SUPPORT</span>
+          </div>
         </div>
-        <div class="portrait-orbit orbit-a"></div>
-        <div class="portrait-orbit orbit-b"></div>
-        <div class="portrait-noise"></div>
-        <img src="assets/avatar/mikinch-avatar.webp" alt="" class="portrait-image"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-        <div class="portrait-fallback" aria-hidden="true">M</div>
-        <div class="portrait-caption">
-          <span>01 / 01</span>
-          <b>MIKINCH</b>
+        <div class="hero-visual reveal">
+          <div class="avatar-wrap">
+            <img src="assets/avatar/avatar.png" alt="Mikinch avatar" width="220" height="220" />
+            <span class="avatar-label">ID: MIK-01</span>
+          </div>
+          <div class="terminal" data-shell="bash" style="max-width: 220px; margin: 0 auto;">
+            <div class="terminal-header">
+              <span>bash — node</span>
+              <span>●</span>
+            </div>
+            <div class="terminal-body"></div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="hero-console terminal" data-terminal="home">
-      <div class="terminal-head">
-        <span>COMMAND PROMPT</span>
-        <span>CMD.EXE</span>
-      </div>
-      <div class="terminal-body"></div>
-      <div class="terminal-cursor">█</div>
-    </div>
+      <div class="deco-line" data-num="01"></div>
 
-    <div class="hero-modules">
-      <a class="module-card module-red" href="services.html#development" data-transition>
-        <small>01 / EXEC</small><strong>CODE</strong><span>bots · web · tools</span>
-        <em>↗</em>
-      </a>
-      <a class="module-card module-brown" href="services.html#design" data-transition>
-        <small>02 / DRAW</small><strong>ART</strong><span>anime · avatars · visual</span>
-        <em>↗</em>
-      </a>
-      <a class="module-card module-violet" href="services.html#presentations" data-transition>
-        <small>03 / DECK</small><strong>SLIDES</strong><span>canva · gamma · ai</span>
-        <em>↗</em>
-      </a>
-      <a class="module-card module-green" href="about.html#off-clock" data-transition>
-        <small>04 / OFFLINE</small><strong>LIFE</strong><span>games · music · weird stuff</span>
-        <em>↗</em>
-      </a>
-    </div>
+      <section class="modules-grid reveal">
+        <div class="geo-module" data-type="code">
+          <div class="mod-title">CODE</div>
+          <div class="mod-desc">Сайты, боты, скрипты, небольшие программы.</div>
+          <span class="mod-num">// 01</span>
+        </div>
+        <div class="geo-module" data-type="art">
+          <div class="mod-title">ART</div>
+          <div class="mod-desc">Anime-style, аватарки, баннеры, карточки.</div>
+          <span class="mod-num">// 02</span>
+        </div>
+        <div class="geo-module" data-type="slides">
+          <div class="mod-title">SLIDES</div>
+          <div class="mod-desc">Презентации и визуальные истории.</div>
+          <span class="mod-num">// 03</span>
+        </div>
+        <div class="geo-module" data-type="life">
+          <div class="mod-title">LIFE</div>
+          <div class="mod-desc">Поддержка, разговор, личный узел.</div>
+          <span class="mod-num">// 04</span>
+        </div>
+      </section>
+
+      <div class="deco-line" data-num="02"></div>
+
+      <section class="terminals-row reveal">
+        <div class="terminal" data-shell="cmd">
+          <div class="terminal-header">
+            <span>CMD — local</span>
+            <span>C:\MIK</span>
+          </div>
+          <div class="terminal-body"></div>
+        </div>
+        <div class="terminal" data-shell="powershell">
+          <div class="terminal-header">
+            <span>PowerShell</span>
+            <span>PS</span>
+          </div>
+          <div class="terminal-body"></div>
+        </div>
+        <div class="terminal" data-shell="git">
+          <div class="terminal-header">
+            <span>git-bash</span>
+            <span>repo</span>
+          </div>
+          <div class="terminal-body"></div>
+        </div>
+      </section>
+
+      <p class="mt-2" style="font-size: 0.7rem; color: var(--cream-muted); letter-spacing: 0.08em;">
+        NODE STATUS: ONLINE · ANONYMOUS · PERSONAL
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <span>MIKINCH // PERSONAL DIGITAL NODE</span>
+      <span>v1.0 · static</span>
+    </footer>
   </div>
 
-  <div class="home-bottomline">
-    <span>SCROLL TO INSPECT</span>
-    <span class="scroll-arrow">↓</span>
-    <span>BUILD 2026.09</span>
-  </div>
-</section>
-
-<section class="screen strip-screen">
-  <div class="section-frame">
-    <div class="strip-head">
-      <span>02 / MODULES</span>
-      <span>WHAT CAN I DO?</span>
-    </div>
-    <div class="strip-grid">
-      <article class="strip-item"><b>WEB</b><span>лендинги / сайты / интерфейсы</span><i>01</i></article>
-      <article class="strip-item"><b>BOTS</b><span>telegram / automation / utilities</span><i>02</i></article>
-      <article class="strip-item"><b>VISUAL</b><span>anime art / avatars / banners</span><i>03</i></article>
-      <article class="strip-item"><b>DECKS</b><span>presentation / canva / gamma</span><i>04</i></article>
-    </div>
-  </div>
-</section>
-
-<section class="screen manifesto-screen">
-  <div class="manifesto-main">
-    <div class="kicker">03 / PERSONAL NOTE</div>
-    <h2>Сделать странно — можно.<br><span>Сделать удобно — обязательно.</span></h2>
-    <p>Мне нравятся вещи, у которых есть характер. Поэтому здесь можно встретить консоли, странные окна, шум, ошибки, неожиданные детали и аккуратный беспорядок — но сам сайт остаётся понятным.</p>
-  </div>
-  <div class="mini-terminal-wrap">
-    <div class="terminal terminal-compact" data-terminal="manifesto">
-      <div class="terminal-head"><span>bash</span><span>creative@local</span></div>
-      <div class="terminal-body"></div><div class="terminal-cursor">█</div>
-    </div>
-  </div>
-</section>
-
-<section class="screen contact-slab">
-  <div class="slab-copy">
-    <span class="kicker">04 / OPEN CHANNEL</span>
-    <h2>Есть задача.<br><span>Есть связь.</span></h2>
-    <p>Напиши — без формального брифинга на двадцать страниц. Достаточно объяснить, что нужно получить.</p>
-  </div>
-  <a class="big-link" href="contact.html" data-transition>ОТКРЫТЬ КОНТАКТЫ <span>↗</span></a>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="footer-left">
-    <span>MIKINCH / 2026</span>
-    <span class="footer-sep">•</span>
-    <span>LOCAL CREATIVE NODE</span>
-  </div>
-  <div class="footer-right">
-    <a href="contact.html" data-transition>CONTACT</a>
-    <span>↗</span>
-  </div>
-</footer>
-
-<script src="data/profile.js"></script>
-<script src="script.js"></script>
+  <script src="data/profile.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

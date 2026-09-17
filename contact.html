@@ -1,111 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080807">
-  <meta name="description" content="Контакты — Mikinch">
-  <title>Контакты — Mikinch</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mikinch — Contact channels." />
+  <title>CONTACT — MIKINCH</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="contact">
-
-<div class="boot-overlay" aria-hidden="true">
-  <div class="boot-frame">
-    <div class="boot-meta"><span>MIKINCH / BOOT</span><span data-boot-state>LOCAL</span></div>
-    <div class="boot-title">loading <em>personality.exe</em></div>
-    <div class="boot-lines">
-      <div><span class="boot-caret">›</span><span data-boot-line>mount /creative</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>scan /memory</span></div>
-      <div><span class="boot-caret">›</span><span data-boot-line>open /visual</span></div>
-    </div>
-    <div class="boot-progress">
-      <span data-boot-bar></span>
-    </div>
-    <div class="boot-foot"><span>00%</span><span>stay strange</span></div>
-  </div>
-</div>
-<div class="glitch-layer" aria-hidden="true"></div>
-
-
-<header class="topbar">
-  <a class="identity" href="index.html" data-transition>
-    <span class="identity-mark">M</span>
-    <span class="identity-copy">
-      <b>MIKINCH</b>
-      <small>PERSONAL DIGITAL NODE</small>
-    </span>
-  </a>
-
-  <div class="hud-status">
-    <span><i class="live-dot"></i> NODE 00</span>
-    <span>NET LOCAL</span>
-    <span id="hud-clock">00:00:00</span>
+<body>
+  <div id="boot-screen" class="boot-screen" aria-hidden="true">
+    <div class="boot-logo">MIKINCH</div>
+    <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
+    <div class="boot-log"><span>&gt;</span> probing channels…</div>
   </div>
 
-  <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="site-wrap">
+    <header class="site-header">
+      <div class="header-brand">
+        <span class="name">MIKINCH</span>
+        <span class="sub">Personal Digital Node</span>
+      </div>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span>LOCAL / ONLINE</span>
+        <span class="header-time" id="header-time">--:--:--</span>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">MENU</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="portfolio.html">WORKS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html" class="active">CONTACT</a>
+        <a href="profile.html">PROFILE</a>
+      </nav>
+    </header>
 
-  <nav class="nav">
-    <a href="index.html" data-page-link="home" data-transition>Главная</a>
-    <a href="services.html" data-page-link="services" data-transition>Услуги</a>
-    <a href="portfolio.html" data-page-link="portfolio" data-transition>Работы</a>
-    <a href="about.html" data-page-link="about" data-transition>Обо мне</a>
-    <a href="contact.html" data-page-link="contact" data-transition>Контакты</a>
-  </nav>
-</header>
+    <main class="site-main">
+      <div class="page-head reveal">
+        <h1>CONTACT</h1>
+        <p class="sub">CHANNELS · DIRECT LINK</p>
+      </div>
 
-<main>
-<section class="inner-screen contact-screen">
-  <div class="contact-header">
-    <div><span class="kicker">04 / OPEN CHANNEL</span><h1>Связь<br><span>установлена.</span></h1></div>
-    <div class="contact-console terminal" data-terminal="contact"><div class="terminal-head"><span>network</span><span>channels.sh</span></div><div class="terminal-body"></div><div class="terminal-cursor">█</div></div>
+      <div class="contacts-grid">
+        <a class="contact-card reveal" href="https://t.me/mikinch" target="_blank" rel="noopener noreferrer">
+          <div class="ch-label">CHANNEL 01</div>
+          <div class="ch-name">TELEGRAM</div>
+          <p class="ch-note">Личная связь. Вопросы, заказы, предложения и просто сообщения.</p>
+          <span class="ch-arrow">→</span>
+        </a>
+
+        <a class="contact-card reveal" href="https://www.tiktok.com/@mikinch" target="_blank" rel="noopener noreferrer">
+          <div class="ch-label">CHANNEL 02</div>
+          <div class="ch-name">TIKTOK</div>
+          <p class="ch-note">ТикТок канал для ознакомления с моими работами по артам и рисованию.</p>
+          <span class="ch-arrow">→</span>
+        </a>
+
+        <a class="contact-card reveal" href="https://pin.it/155nbSQLT" target="_blank" rel="noopener noreferrer">
+          <div class="ch-label">CHANNEL 03</div>
+          <div class="ch-name">PINTEREST</div>
+          <p class="ch-note">Эстетичные картинки, референсы и визуальные находки.</p>
+          <span class="ch-arrow">→</span>
+        </a>
+
+        <a class="contact-card reveal" href="https://github.com/mik1nch" target="_blank" rel="noopener noreferrer">
+          <div class="ch-label">CHANNEL 04</div>
+          <div class="ch-name">GITHUB</div>
+          <p class="ch-note">Код, эксперименты и открытые проекты.</p>
+          <span class="ch-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="network-term reveal">
+        <div class="terminal" data-shell="network">
+          <div class="terminal-header">
+            <span>network shell</span>
+            <span>probe</span>
+          </div>
+          <div class="terminal-body"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>MIKINCH // PERSONAL DIGITAL NODE</span>
+      <span>v1.0 · static</span>
+    </footer>
   </div>
 
-  <div class="channel-grid">
-    <a class="channel-card telegram" href="https://t.me/mikinch" target="_blank" rel="noopener">
-      <span class="channel-no">01</span><span class="channel-icon">↗</span><b>TELEGRAM</b><strong>@mikinch</strong><p>Личная связь. Вопросы, заказы, предложения и просто сообщения.</p>
-      <small>t.me/mikinch</small>
-    </a>
-    <a class="channel-card tiktok" href="https://www.tiktok.com/@mikinch" target="_blank" rel="noopener">
-      <span class="channel-no">02</span><span class="channel-icon">♪</span><b>TIKTOK</b><strong>@mikinch</strong><p>ТикТок канал для ознакомления с моими работами по артам и рисованию.</p>
-      <small>tiktok.com/@mikinch</small>
-    </a>
-    <a class="channel-card pinterest" href="https://pin.it/155nbSQLT" target="_blank" rel="noopener">
-      <span class="channel-no">03</span><span class="channel-icon">◇</span><b>PINTEREST</b><strong>pin.it/155nbSQLT</strong><p>Эстетичные картинки, референсы и визуальные находки.</p>
-      <small>pin.it/155nbSQLT</small>
-    </a>
-    <a class="channel-card github" href="https://github.com/mik1nch" target="_blank" rel="noopener">
-      <span class="channel-no">04</span><span class="channel-icon">⌘</span><b>GITHUB</b><strong>mik1nch</strong><p>Код и публичные проекты.</p>
-      <small>github.com/mik1nch</small>
-    </a>
-  </div>
-
-  <div class="contact-bottom">
-    <div class="terminal terminal-wide" data-terminal="contact2">
-      <div class="terminal-head"><span>curl</span><span>connection.log</span></div>
-      <div class="terminal-body"></div><div class="terminal-cursor">█</div>
-    </div>
-    <div class="contact-note"><span>NO FORMAL BRIEF REQUIRED</span><p>Достаточно написать, чего хочется добиться. Остальные детали можно собрать в разговоре.</p></div>
-  </div>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="footer-left">
-    <span>MIKINCH / 2026</span>
-    <span class="footer-sep">•</span>
-    <span>LOCAL CREATIVE NODE</span>
-  </div>
-  <div class="footer-right">
-    <a href="contact.html" data-transition>CONTACT</a>
-    <span>↗</span>
-  </div>
-</footer>
-
-<script src="data/profile.js"></script>
-<script src="script.js"></script>
+  <script src="data/profile.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
